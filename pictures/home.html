@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log in</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <!-- div header-->
+        <div class="header">
+            <h1><b><i>Nolly's Boutique</i></b></h1>
+            <script>
+                function myFuncton()
+                    {
+                        var un = document.forms["myform"]["Uname"].value;
+                        var pw = document.forms["myform"]["Pass"].value;
+                        if(un =="cyber" && pw =="3697")
+                         {
+                             window.location.href="products.html";
+                         
+                         }
+                        else{
+                            alert("Incorrect username and password please check your password");
+                        }
+                    }
+            </script>
+        
+        </div>
+    </head>
+        
+          
+    <body>
+          <!--div log in-->
+            <h2>Log IN </h2>
+            <div class="login">
+                <form name="myform" method="post">
+                    <label>User Name</label>
+                    <input type="text" name="Uname" class="inputText" placeholder="User Name"/>
+                    <br/>
+                    <br/>
+                    <label>Password</label>
+                    <input type="text" name="Pass" class="inputText" placeholder="Password"/>
+                    <br/>
+                    <br/>
+                    <input type="button" name="log" id="logButton" value="login" onclick="myFuncton()"/>
+              
+               </form> 
+ 
+            </div>
+    </body>
+</html>

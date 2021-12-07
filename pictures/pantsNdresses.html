@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .leftbar
+        {
+         float: left;
+         padding-right: 30px;
+         width: 30%;
+         }
+            .rightbar
+        {
+         float:right;
+         padding-left:30px;
+         width:30%;
+        }
+        </style>
+    </head>
+    <body>
+        <h2>Nolly's boutques trousers and dresses</h2>
+          <div class ="pantsNdress">
+            <script>
+                var i = 0;
+            var images = [];
+            var time = 3000;
+                //blazer
+                // images
+                images[0] = 'pictures/pants1.jpg'
+                images[1] = 'pictures/pants2.jpg'
+                images[2] = 'pictures/pants3.jpg'
+                images[3] = 'pictures/pants4.jpg'
+                images[4] = 'pictures/dresses1.jpg'
+                images[5] = 'pictures/dresses2.jpg'
+                images[6] = 'pictures/dresses3.jpg'
+                //changes image
+                function switchImg(){
+                    document.blazer.src = images[i]
+                    if(i < images.length -1){
+                        i++;
+                    }else{
+                        i=0;
+                    }
+                    setTimeout("switchImg()",time)
+                }
+                window.onload = switchImg;
+            
+            </script>
+        <img name ="blazer" width="200" height="100"/>
+        </div>
+        <div class ="leftbar">
+            <h3>Trousers</h3>
+            <a href="trouser.html">BrowseTrousers</a>
+            <select id="pants">
+                <option value="karma">Karma</option>
+                <option value="sevenson">SevenSons</option>
+                <option value="jackjones">Jack Jone</option>
+                <option value="uzzi">Uzzi</option>
+            </select>
+        </div>
+        <div class="rightbar">
+            <h3>Dresses</h3>
+            <a href="dress.html">BrowseDresses</a>
+            <select id ="pants">
+              <option value="missme">Missme</option>
+              <option value="lv">LV</option>
+              <option value="gucci">GUCCI</option>
+            </select>
+        </div>
+    </body>
+</html>

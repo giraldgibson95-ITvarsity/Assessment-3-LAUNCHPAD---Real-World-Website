@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Check Our Products</h1>
+        <style>
+            h2 {
+                font-family: noto;
+                font-weight: bold;
+                background-color: pink;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Nolly's Boutique Accessories</h2>
+        <div class="accessories">
+            <script>
+        //accessories
+            //start point
+            var i = 0;
+            var images = [];
+            var time = 3000;
+            //image list
+            images[0] = 'pictures/accessories1.jpg'
+            images[1] = 'pictures/accessories2.jpg'
+            images[2] = 'pictures/accessories3.jpg'
+            images[3] = 'pictures/accessories4.jpg'
+            images[4] = 'pictures/accessories5.jpg'
+            images[5] = 'pictures/accessories6.jpg'
+            images[6] = 'pictures/accessories7.jpg'
+            images[7] = 'pictures/accessories2,1.jpg'
+            images[8] = 'pictures/accessories2,2.jpg'
+            images[9] = 'pictures/accessories2,3.jpg'
+          
+            function changeImg(){
+                document.accessories.src = images[i]
+                
+                if(i < images.length -1){
+                    i++;
+                } else{
+                    i=0;
+                }
+                setTimeout("changeImg()",time);
+            }
+            window.onload = changeImg;
+            
+        </script>
+        <img name ="accessories" width="470" height="190"/>
+        </div>
+        <div class="maleAccessories">
+            <fieldset>
+                <legend>Male Accessories</legend>
+                   <input type ="radio" id ="rad" name ="combo"/>combo 
+                    <input type="radio" id ="rad" name = "polyester-boe-tie"/>Polyester Bowtie
+                    <input type="radio" id ="rad" name ="belt">Belt,Perfume and Bowtie<br/>
+                    <input type="radio" id ="rad" name ="necktie">Four in Hand Necktie
+                    <input type="radio" id ="rad" name ="bowtie"/>Chacole Bowtie<br/>
+                    <input type ="radio" id ="rad" name ="suspenders"/>Bowtie and Suspenders
+                    <input type="radio" id ="rad" name ="wallets"/>Wallets
+            </fieldset>
+        </div>
+        <div class="femaleAccessories">
+            <fieldset>
+                <legend>Female Accessories</legend>
+                <input type="radio" id="rad" name ="comb"/>Comb
+                <input type="radio" id="rad" name ="handbag"/>four set handbags
+                <input type="radio" id="rad" name ="italianbag"/>Italian Handbags
+                <input type="radio" id="rad" name ="russianbags"/>Russian Handbag<br/>
+                <input type="radio" id="rad" name ="guccibag"/>Gucci Handbag
+                <input type ="radio" id="rad" name="sweagerglass"/>Sweager glasses
+                <input type="radio" id="rad" name ="sunglass"/>Sun glasses
+            </fieldset>
+        </div>
+        <h6>Browse</h6>
+          <a href="Accessories.html">Browse</a>
+            <h3>Click the link for male blazers</h3>
+        <a href="blazer.html">Blazer</a>
+    </body>
+            
+
+</html>

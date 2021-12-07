@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <style>
+            h2 {
+                font-family: noto;
+                font-weight: bold;
+                background-color: pink;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+         <h2>Click the link for browsing and placing an Oder</h2>
+        <div class ="blazer">
+            <script>
+                var i = 0;
+            var images = [];
+            var time = 3000;
+                //blazer
+                // images
+                images[0] = 'pictures/blazer1.jpg'
+                images[1] = 'pictures/blazer2.jpg'
+                images[2] = 'pictures/blazer3.jpg'
+                images[3] = 'pictures/blazer4.jpg'
+                images[4] = 'pictures/blazer5.jpg'
+                images[5] = 'pictures/blazer6.jpg'
+                images[6] = 'pictures/blazer7.jpg'
+                //changes image
+                function switchImg(){
+                    document.blazer.src = images[i]
+                    if(i < images.length -1){
+                        i++;
+                    }else{
+                        i=0;
+                    }
+                    setTimeout("switchImg()",time)
+                }
+                window.onload = switchImg;
+            
+            </script>
+            
+        <img name ="blazer" width="200" height="100"/>
+        </div>
+        <h2>browse</h2>
+        <div class="products">
+            <a href="blaze.html">BrowseBlazer</a>
+            <select id ="blazer">
+                <option value="jblazer">johnBlaizer</option>
+                <option value="dhblazer">Dh blackblazer</option>
+                <option value="jgblazer">JG blazer</option>
+                <option value="dcblazer">DC Blazer</option>
+                <option value="lbblazer">lightblue dcblazer</option>
+                <option value="dgblazer">DandG Blazer</option>
+            </select>
+        </div>
+        <h3>follow to buy pants and dresses</h3>
+        <a href="pantsNdresses.html">Pants/Dresses</a>
+    </body>
+</html>
